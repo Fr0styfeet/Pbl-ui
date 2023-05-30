@@ -1,14 +1,20 @@
 {
   "scripts": {
-    "start": "vite"
+    "start": "vite",
+    "build": "react-scripts build",
+    "dev": "nodemon server",
+    "start:vite": "vite",
+    "start:server": "node server.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "nodemon": "^2.0.22",
     "postcss": "^8.4.21",
+    "react-scripts": "^5.0.1",
     "tailwindcss": "^3.2.7",
     "vite": "^4.1.4"
   },
-  "name": "tailwind",
+  "name": "chatroom",
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "dependencies": {
@@ -27,10 +33,11 @@
     "cssesc": "^3.0.0",
     "defined": "^1.0.1",
     "detective": "^5.2.1",
-    "didyoumean": "^1.2.2", 
+    "didyoumean": "^1.2.2",
     "dlv": "^1.1.3",
     "electron-to-chromium": "^1.4.311",
     "escalade": "^3.1.1",
+    "express": "^4.18.2",
     "fast-glob": "^3.2.12",
     "fastq": "^1.15.0",
     "fill-range": "^7.0.1",
@@ -47,7 +54,9 @@
     "merge2": "^1.4.1",
     "micromatch": "^4.0.5",
     "minimist": "^1.2.8",
+    "moment": "^2.29.4",
     "nanoid": "^3.3.4",
+    "node": "^20.1.0",
     "node-releases": "^2.0.10",
     "normalize-path": "^3.0.0",
     "normalize-range": "^0.1.2",
@@ -69,6 +78,7 @@
     "resolve": "^1.22.1",
     "reusify": "^1.0.4",
     "run-parallel": "^1.2.0",
+    "socket.io": "^4.6.1",
     "source-map-js": "^1.0.2",
     "supports-preserve-symlinks-flag": "^1.0.0",
     "to-regex-range": "^5.0.1",
@@ -78,7 +88,11 @@
     "yaml": "^1.10.2"
   },
   "keywords": [],
-  "author": "",
+  "author": "anisha",
   "license": "ISC",
-  "description": ""
+  "description": "pbl chat lol",
+  "repository": {
+    "type": "git",
+    "url": "frostyfeet"
+  }
 }

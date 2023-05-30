@@ -9,12 +9,12 @@
 <div id="login-box">
   <div class="left">
     <h1 id='status'>Login</h1>
-    <input type="text" id="username" name="username" placeholder="username" />
+    <input type="text" id="username" name="username" placeholder="Username" />
     <input type="text" id="email" name="email" placeholder="E-mail" />
     <input type="password" id="password" name="password" placeholder="Password" />
     
     <input type="submit" id='signUp' name="signUp_submit" value="Sign Up" /><br><br>
-    <span>Already a user? <a href="login.html">Login</a></span>
+    <span>Already a user? <a href="./login.html">Login</a></span>
 
   </div>
   
@@ -68,7 +68,9 @@ signUp.addEventListener('click',(e) => {
           email: email
       })
 
-      alert('user created!');
+      alert('User created! Welcome');
+      window.location.href = '/index.html';
+
       // ...
     })
     .catch((error) => {
@@ -81,37 +83,10 @@ signUp.addEventListener('click',(e) => {
 
 });
 
- login.addEventListener('click',(e)=>{
-   var email = document.getElementById('email').value;
-   var password = document.getElementById('password').value;
-
-      signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-
-        const dt = new Date();
-         update(ref(database, 'users/' + user.uid),{
-          last_login: dt,
-        })
-
-         alert('User logged in!');
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-
-        alert(errorMessage);
-  });
-
- });
-
 const user = auth.currentUser;
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
+    
     const uid = user.uid;
     //bla bla bla
     // ...

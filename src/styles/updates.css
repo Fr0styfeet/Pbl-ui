@@ -1,0 +1,21 @@
+img{
+    height: 100vh;
+   position: absolute;
+   left: 25vw;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    /* Adjust this value to change the distance between buttons */
+    gap:2px;
+    position: absolute;
+    left: 62vw;
+    top: 35vh;
+}
+
+.square-button {
+      cursor: pointer;
+    width: 52px; /* Adjust this value to change the button size */
+    height: 52px; /* Adjust this value to change the button size */
+    background-color: #53C8C1; /* Adjust this value to change the button color */
+}
